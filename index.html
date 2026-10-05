@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pythagoras Theorem — Peer Instruction Activity</title>
+<style>
+:root{--blue:#3157d5;--navy:#111827;--bg:#f4f6fa;--card:#fff;--line:#dfe3ea;--muted:#667085;--green:#15803d;--orange:#b45309;--red:#b42318}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:#172033;font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.55}
+header{background:linear-gradient(135deg,#111827,#30499a);color:#fff;padding:38px 20px}.wrap{max-width:1050px;margin:auto} h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.08;margin:8px 0} header p{max-width:800px;color:#e1e7ff}.tag{display:inline-block;padding:6px 11px;border:1px solid #ffffff44;border-radius:999px;background:#ffffff18;font-size:.82rem}
+nav{position:sticky;top:0;z-index:20;background:var(--navy);display:flex;gap:6px;overflow:auto;padding:9px 16px}nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:7px;white-space:nowrap}nav a:hover{background:#ffffff18}
+main{padding:28px 20px 70px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin:18px 0;box-shadow:0 5px 18px #1018280d}.hero{border-left:5px solid var(--blue)}h2{margin-top:0;color:#16224a}h3{color:#25335d}.small{font-size:.92rem;color:var(--muted)}.step{display:flex;gap:14px;margin:16px 0}.num{min-width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700}.video-wrap{position:relative;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden}.video-wrap iframe{width:100%;height:100%;border:0}.status{margin-top:10px;font-size:.9rem;color:var(--muted)}
+.btn{border:0;border-radius:9px;padding:11px 16px;font-weight:700;cursor:pointer;background:var(--blue);color:#fff}.btn.secondary{background:#475467}.btn.green{background:var(--green)}.btn:disabled{opacity:.5;cursor:not-allowed}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.mcq{border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}.option{display:block;border:1px solid var(--line);border-radius:9px;padding:12px;margin:9px 0;cursor:pointer}.option:hover{background:#f8faff}.option input{margin-right:10px}.selected{border-color:var(--blue);background:#eef2ff}
+.phase{padding:12px 15px;border-radius:10px;background:#f8fafc;border:1px solid var(--line);margin:12px 0}.phase.active{border-color:var(--blue);background:#eef2ff}.hidden{display:none!important}.result{padding:15px;border-radius:10px;margin-top:14px}.correct{background:#ecfdf3;color:#166534;border:1px solid #bbf7d0}.wrong{background:#fff7ed;color:#9a3412;border:1px solid #fed7aa}.neutral{background:#f2f4f7;color:#344054}
+.progress{display:flex;gap:7px;margin:14px 0}.dot{height:8px;flex:1;background:#e4e7ec;border-radius:99px}.dot.on{background:var(--blue)}.dot.done{background:var(--green)}
+.reflection textarea{width:100%;min-height:90px;border:1px solid var(--line);border-radius:9px;padding:12px;font:inherit}.footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:35px}
+.modal{position:fixed;inset:0;background:#101828b8;z-index:100;display:flex;align-items:center;justify-content:center;padding:18px}.modal-card{width:min(820px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:18px;padding:24px;box-shadow:0 20px 70px #0005}.modal-title{display:flex;justify-content:space-between;gap:15px;align-items:center}.badge2{background:#eef2ff;color:#243b9a;border-radius:999px;padding:5px 9px;font-size:.78rem;font-weight:700}
+.vote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.vote-card{border:2px solid var(--line);border-radius:12px;padding:16px;cursor:pointer;min-height:110px}.vote-card:hover{border-color:#98a2b3}.vote-card input{margin-right:7px}.vote-card.chosen{border-color:var(--blue);background:#eef2ff}.vote-card.correctChoice{border-color:var(--green);background:#ecfdf3}.vote-card.incorrectChoice{border-color:var(--red);background:#fff1f2}.label{font-weight:800;font-size:1.1rem}.center{text-align:center}
+@media(max-width:700px){.vote-grid{grid-template-columns:1fr}.card{padding:18px}.modal-card{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<span class="tag">Grade 7 · Mathematics</span>
+<h1>Pythagoras Theorem</h1>
+<p>A Peer Instruction activity based on the visual proof in the assigned video. The question appears at <strong>00:50</strong>, before the second arrangement is revealed.</p>
+</div></header>
+<nav><a href="#instructions">Instructions</a><a href="#video">Video</a><a href="#activity">Question</a><a href="#reflection">Reflection</a></nav>
+<main class="wrap">
+<section id="instructions" class="card hero">
+<h2>How the activity works</h2>
+<div class="progress"><span class="dot on" id="p1"></span><span class="dot" id="p2"></span><span class="dot" id="p3"></span><span class="dot" id="p4"></span><span class="dot" id="p5"></span></div>
+<div class="step"><div class="num">1</div><div><strong>Watch the video.</strong><br>Play from the beginning. It will automatically pause at <strong>00:50</strong>.</div></div>
+<div class="step"><div class="num">2</div><div><strong>Vote individually.</strong><br>Choose the answer you think is correct. Do not discuss it with your partner before the first vote.</div></div>
+<div class="step"><div class="num">3</div><div><strong>Discuss with your partner.</strong><br>Explain your reasoning and listen to your partner's reasoning. You may change your mind.</div></div>
+<div class="step"><div class="num">4</div><div><strong>Vote again.</strong><br>Submit your revised answer after the discussion.</div></div>
+<div class="step"><div class="num">5</div><div><strong>See the answer and explanation.</strong><br>Then continue the video from exactly <strong>00:50</strong> to see the next part of the visual proof.</div></div>
+</section>
+
+<section id="video" class="card">
+<h2>1. Watch the video</h2>
+<p>Watch from the beginning. The video will pause automatically at 00:50.</p>
+<div class="video-wrap"><iframe id="player" src="https://www.youtube.com/embed/yfGtbNgcrQ8?enablejsapi=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+<div class="status" id="videoStatus">Preparing the video…</div>
+</section>
+
+<section id="activity" class="card">
+<h2>2. Peer Instruction</h2>
+<p class="small">The question below appears automatically when the video reaches <strong>00:50</strong>. Complete the two votes and the discussion before continuing the video.</p>
+<div class="phase active"><strong>First vote → Discuss → Revote → Reveal</strong></div>
+<div class="step"><div class="num">1</div><div><strong>First vote:</strong> Answer the prediction question individually when it appears. Do not discuss your answer yet.</div></div>
+<div class="step"><div class="num">2</div><div><strong>Discuss:</strong> Explain your reasoning to your partner. Compare your ideas about the shapes and their areas.</div></div>
+<div class="step"><div class="num">3</div><div><strong>Revote:</strong> Choose your final answer after the discussion.</div></div>
+<div class="step"><div class="num">4</div><div><strong>Reveal and continue:</strong> Check the explanation, then continue the video from <strong>00:50</strong>.</div></div>
+<div class="result neutral"><strong>Why only one question?</strong><br>The prediction question is presented once—at the exact point where students need to make the prediction. The first and second votes use the same question because changing an answer after peer discussion is the central part of the activity.</div>
+</section>
+
+<section id="reflection" class="card reflection">
+<h2>3. Reflection</h2>
+<p>After watching the next part of the video, briefly explain how the two arrangements demonstrate that the areas are equal.</p>
+<textarea id="reflectionText" placeholder="Write your explanation here…"></textarea>
+<div class="actions"><button class="btn secondary" onclick="saveReflection()">Save my response</button></div>
+<div id="saved" class="result correct hidden">Response saved on this page.</div>
+</section>
+
+<p class="footer">Pythagoras Theorem · Grade 7 Mathematics · Visual proof activity</p>
+</main>
+
+<div class="modal hidden" id="questionModal">
+<div class="modal-card">
+<div class="modal-title"><div><span class="badge2">00:50 · VIDEO PAUSED</span><h2 style="margin:10px 0 0">Prediction Question</h2></div></div>
+<p><strong>The four right triangles are rearranged inside another square of the same side length (a+b). What do you predict the unshaded region will look like after the rearrangement of the shaded region to rectangles?</strong></p>
+<div class="phase active"><strong>Individual vote:</strong> Select your answer. Do not discuss it yet.</div>
+<div class="vote-grid">
+<label class="vote-card"><input type="radio" name="popupVote" value="A"> <span class="label">A</span><br>One square with side c</label>
+<label class="vote-card"><input type="radio" name="popupVote" value="B"> <span class="label">B</span><br>Two squares with sides a and b, respectively</label>
+<label class="vote-card"><input type="radio" name="popupVote" value="C"> <span class="label">C</span><br>One rectangle with sides a and b</label>
+</div>
+<div class="actions"><button class="btn" onclick="popupFirstVote()">Submit individual vote</button></div>
+<div id="popupDiscussion" class="hidden">
+<div class="phase active"><strong>Now discuss with your partner.</strong> Explain your reasoning to each other. Decide whether you want to keep or change your answer.</div>
+<div class="vote-grid">
+<label class="vote-card"><input type="radio" name="popupRevote" value="A"> <span class="label">A</span><br>One square with side c</label>
+<label class="vote-card"><input type="radio" name="popupRevote" value="B"> <span class="label">B</span><br>Two squares with sides a and b, respectively</label>
+<label class="vote-card"><input type="radio" name="popupRevote" value="C"> <span class="label">C</span><br>One rectangle with sides a and b</label>
+</div>
+<div class="actions"><button class="btn" onclick="popupRevote()">Submit final vote</button></div>
+</div>
+<div id="popupReveal" class="hidden">
+<div class="result correct"><strong>Correct answer: B.</strong><br>The rearrangement leaves two squares with sides a and b. Their areas are a² and b², which together equal the original unshaded area c².</div>
+<div class="actions"><button class="btn green" onclick="resumeVideo()">Continue video from 00:50</button></div>
+</div>
+</div></div>
+
+<script>
+let player, pausedAtQuestion=false, firstDone=false, secondDone=false;
+const statusEl=document.getElementById('videoStatus');
+function onYouTubeIframeAPIReady(){ player=new YT.Player('player',{events:{onReady:()=>{statusEl.textContent='Video ready. Start playback from the beginning.';},onStateChange:onStateChange}}); }
+function onStateChange(e){ if(e.data===YT.PlayerState.PLAYING){ statusEl.textContent='Playing… It will pause automatically at 00:50.'; checkTime(); } }
+function checkTime(){
+ if(!player || !player.getCurrentTime) return;
+ const t=player.getCurrentTime();
+ if(t>=49.8 && t<52 && !pausedAtQuestion){ pausedAtQuestion=true; player.pauseVideo(); player.seekTo(50,true); statusEl.textContent='Paused at 00:50. Answer the question before continuing.'; document.getElementById('questionModal').classList.remove('hidden'); updateProgress(1); }
+ if(player.getPlayerState()===YT.PlayerState.PLAYING) requestAnimationFrame(checkTime);
+}
+function startLoop(){ if(player && player.getPlayerState()===YT.PlayerState.PLAYING) requestAnimationFrame(checkTime); }
+setInterval(()=>{ if(player && player.getPlayerState()===YT.PlayerState.PLAYING) checkTime(); },250);
+function popupFirstVote(){
+ const v=document.querySelector('input[name="popupVote"]:checked'); if(!v){alert('Please choose an answer before submitting your individual vote.');return;}
+ firstDone=true; document.getElementById('popupDiscussion').classList.remove('hidden'); document.querySelectorAll('input[name="popupVote"]').forEach(x=>x.disabled=true); updateProgress(2);
+ document.getElementById('popupDiscussion').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function popupRevote(){
+ const v=document.querySelector('input[name="popupRevote"]:checked'); if(!v){alert('Please choose your final answer after discussing with your partner.');return;}
+ secondDone=true; document.querySelectorAll('input[name="popupRevote"]').forEach(x=>x.disabled=true); document.getElementById('popupReveal').classList.remove('hidden'); updateProgress(3); document.getElementById('popupReveal').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function resumeVideo(){
+ if(!player) return;
+ document.getElementById('questionModal').classList.add('hidden');
+ player.seekTo(50,true); player.playVideo();
+ statusEl.textContent='Video resumed from 00:50.'; updateProgress(4);
+ document.getElementById('activity').scrollIntoView({behavior:'smooth',block:'start'});
+ setTimeout(()=>updateProgress(5),1500);
+}
+function updateProgress(n){for(let i=1;i<=5;i++){const d=document.getElementById('p'+i);if(!d)continue;d.classList.toggle('on',i===n);d.classList.toggle('done',i<n);}}
+function saveReflection(){const t=document.getElementById('reflectionText').value.trim();if(!t){alert('Write your reflection first.');return;}document.getElementById('saved').classList.remove('hidden');}
+
+// Load the YouTube IFrame Player API.
+const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);
+</script>
+</body>
+</html>
